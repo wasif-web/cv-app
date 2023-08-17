@@ -1,38 +1,25 @@
+// App.js
 import React from 'react';
 import './App.css';
+import FacebookCard from './FacebookCard';
+import sampleImage from './sample image.jpg';
 
 function App() {
+  const user = {
+    name: 'Wasif Raza',
+    avatarUrl: sampleImage, 
+  };
+
   return (
-    <div className="cv-container">
-      <header>
-        <h1>Muhammad Wasif Raza</h1>
-      </header>
-      <section className="education">
-        <h2>Education</h2>
-        <p>Graduation - [Karachi University]</p>
-      </section>
-      <section className="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>React.js</li>
-          <li>JavaScript</li>
-          <li>HTML5</li>
-          <li>CSS3</li>
-        </ul>
-      </section>
-      <section className="projects">
-        <h2>Projects</h2>
-        <ul>
-          <li>E-Commerce Website</li>
-          <li>Personal Portfolio Website</li>
-          <li>Task Management App</li>
-        </ul>
-      </section>
+    <div className="App">
+      <FacebookCard
+        user={user}
+        time="10 hr"
+        imageUrl={sampleImage}
+        postText="Captured a picture on Eid day in Madinah, where the empty road echoed serenity."
+      />
     </div>
   );
 }
 
 export default App;
-
-
-
